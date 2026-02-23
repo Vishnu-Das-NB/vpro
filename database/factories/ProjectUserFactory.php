@@ -19,6 +19,7 @@ class ProjectUserFactory extends Factory
         return [
             "project_id" => \App\Models\Project::factory(),
             "user_id" => \App\Models\User::factory(),
+            "created_by" => \App\Models\User::factory(),
         ];
     }
 }

@@ -23,6 +23,7 @@ class TaskFactory extends Factory
             "end"=> $this->faker->dateTimeBetween("+2 months","+3 months"),
             "priority"=> $this->faker->numberBetween(1,5),
             "status"=> $this->faker->randomElement(['open','inprogress','pending','onhold','completed','abandoned']),
+            "user_id" => \App\Models\User::factory(),
         ];
     }
 }

@@ -19,6 +19,7 @@ class TaskDocumentFactory extends Factory
         return [
             "task_id" => \App\Models\Task::factory(),
             "document_id" => \App\Models\Document::factory(),
+            "user_id" => \App\Models\User::factory(),
         ];
     }
 }

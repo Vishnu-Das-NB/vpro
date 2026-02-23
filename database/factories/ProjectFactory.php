@@ -23,6 +23,8 @@ class ProjectFactory extends Factory
             "end"=> $this->faker->dateTimeBetween("+2 months","+3 months"),
             "priority"=> $this->faker->numberBetween(1,5),
             "status"=> $this->faker->randomElement(['open','inprogress','pending','onhold','completed','abandoned']),
+            "organization_id" => \App\Models\Organization::factory(),
+            "user_id" => \App\Models\User::factory(),
         ];
     }
 }

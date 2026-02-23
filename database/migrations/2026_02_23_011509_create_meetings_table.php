@@ -18,6 +18,7 @@ return new class extends Migration
             $table->dateTime('start')->nullable();
             $table->dateTime('end')->nullable();
             $table->integer('priority')->unsigned()->nullable();
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

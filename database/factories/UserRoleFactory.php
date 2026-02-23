@@ -19,6 +19,7 @@ class UserRoleFactory extends Factory
         return [
             "user_id" => \App\Models\User::factory(),
             "role_id" => \App\Models\Role::factory(),
+            "created_by" => \App\Models\User::factory(),
         ];
     }
 }

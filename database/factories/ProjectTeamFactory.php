@@ -19,6 +19,7 @@ class ProjectTeamFactory extends Factory
         return [
             "project_id" => \App\Models\Project::factory(),
             "team_id" => \App\Models\Teams::factory(),
+            "user_id" => \App\Models\User::factory(),
         ];
     }
 }

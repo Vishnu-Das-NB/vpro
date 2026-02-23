@@ -19,6 +19,8 @@ return new class extends Migration
             $table->dateTime('end')->nullable();
             $table->integer('priority')->unsigned()->nullable();
             $table->enum('status', ['open','inprogress','pending','onhold','completed','abandoned'])->default('open');
+            $table->foreignId('organization_id')->constrained('organizations')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

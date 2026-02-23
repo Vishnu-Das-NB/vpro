@@ -49,4 +49,13 @@ class User extends Authenticatable
             'two_factor_confirmed_at' => 'datetime',
         ];
     }
+    public function organizations()
+    {
+        return $this->belongsToMany(
+            Organization::class,
+            'organization_users',
+            'user_id',
+            'organization_id'
+        );
+    }
 }

@@ -19,6 +19,7 @@ class TaskMeetingFactory extends Factory
         return [
             "task_id" => \App\Models\Task::factory(),
             "meeting_id" => \App\Models\Meeting::factory(),
+            "user_id" => \App\Models\User::factory(),
         ];
     }
 }

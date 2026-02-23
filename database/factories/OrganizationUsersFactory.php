@@ -2,13 +2,12 @@
 
 namespace Database\Factories;
 
-
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ProjectTask>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\OrganizationUsers>
  */
-class ProjectTaskFactory extends Factory
+class OrganizationUsersFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,9 +17,9 @@ class ProjectTaskFactory extends Factory
     public function definition(): array
     {
         return [
-            "project_id" => \App\Models\Project::factory(),
-            "task_id" => \App\Models\Task::factory(),
+            "organization_id" => \App\Models\Organization::factory(),
             "user_id" => \App\Models\User::factory(),
+            "created_by" => \App\Models\User::factory(),
         ];
     }
 }

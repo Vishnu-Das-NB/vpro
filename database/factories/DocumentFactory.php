@@ -19,6 +19,7 @@ class DocumentFactory extends Factory
         return [
             "name" => $this->faker->word(),
             "description" => $this->faker->sentence(),
+            "user_id" => \App\Models\User::factory(),
         ];
     }
 }

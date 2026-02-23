@@ -21,6 +21,7 @@ class ProjectMeetingFactory extends Factory
         return [
             "project_id" => \App\Models\Project::factory(),
             "meeting_id" => \App\Models\Meeting::factory(),
+            "user_id" => \App\Models\User::factory(),
         ];
     }
 }

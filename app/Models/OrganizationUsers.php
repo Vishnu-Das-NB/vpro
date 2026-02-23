@@ -6,27 +6,28 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class UserRole extends Model
+class OrganizationUsers extends Model
 {
-    /** @use HasFactory<\Database\Factories\UserRoleFactory> */
+    /** @use HasFactory<\Database\Factories\OrganizationUsersFactory> */
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
+        'organization_id',
         'user_id',
-        'role_id',
-        'created_by',
     ];
 
+    public function organization()
+    {
+        return $this->belongsTo(Organization::class, 'organization_id');
+    }
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
     }
-    public function role()
-    {
-        return $this->belongsTo(Role::class, 'role_id');
-    }
+
     public function createdBy()
     {
         return $this->belongsTo(User::class, 'created_by');
     }
+
 }

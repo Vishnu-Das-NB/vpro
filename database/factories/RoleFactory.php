@@ -18,6 +18,7 @@ class RoleFactory extends Factory
     {
         return [
             "name"=> $this->faker->jobTitle(),
+            "user_id" => \App\Models\User::factory(),
         ];
     }
 }
