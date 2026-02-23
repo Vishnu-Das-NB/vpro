@@ -17,7 +17,7 @@ class TeamMemberFactory extends Factory
     public function definition(): array
     {
         return [
-            "team_id" => \App\Models\Team::factory(),
+            "team_id" => \App\Models\Teams::factory(),
             "user_id" => \App\Models\User::factory(),
             "created_by" => \App\Models\User::factory(),
         ];
