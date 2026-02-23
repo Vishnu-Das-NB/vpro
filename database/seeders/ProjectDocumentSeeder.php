@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ProjectDocument;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,6 @@ class ProjectDocumentSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        ProjectDocument::factory()->count(10)->create();
     }
 }

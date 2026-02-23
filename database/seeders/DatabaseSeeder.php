@@ -19,5 +19,24 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+        User::factory()->count(10)->create();
+        $this->call([
+            OrganizationSeeder::class,
+            TeamsSeeder::class,
+            RoleSeeder::class,
+            UserRoleSeeder::class,
+            ProjectSeeder::class,
+            TaskSeeder::class,
+            MeetingSeeder::class,
+            DocumentSeeder::class,
+            ProjectTeamSeeder::class,
+            ProjectUserSeeder::class,
+            ProjectTaskSeeder::class,
+            ProjectDocumentSeeder::class,
+            ProjectMeetingSeeder::class,
+            TaskMeetingSeeder::class,
+            TaskDocumentSeeder::class,
+            TaskLogsSeeder::class,
+        ]);
     }
 }

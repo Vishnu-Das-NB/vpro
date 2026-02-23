@@ -18,7 +18,7 @@ class ProjectTeamFactory extends Factory
     {
         return [
             "project_id" => \App\Models\Project::factory(),
-            "team_id" => \App\Models\Team::factory(),
+            "team_id" => \App\Models\Teams::factory(),
         ];
     }
 }
