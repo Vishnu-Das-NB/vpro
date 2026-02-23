@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('project_meetings', function (Blueprint $table) {
             $table->id();
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
+            $table->foreign('meeting_id')->references('id')->on('meetings')->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

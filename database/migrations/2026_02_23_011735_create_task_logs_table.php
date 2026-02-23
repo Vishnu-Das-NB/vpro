@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('task_logs', function (Blueprint $table) {
             $table->id();
+            $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
+            $table->text('message');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
