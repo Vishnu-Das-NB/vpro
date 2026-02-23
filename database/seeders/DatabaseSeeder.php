@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             UserRoleSeeder::class,
             ProjectSeeder::class,
             TaskSeeder::class,
+            OrganizationUsersSeeder::class,
             TeamMemberSeeder::class,
             MeetingSeeder::class,
             DocumentSeeder::class,
