@@ -18,6 +18,7 @@ return new class extends Migration
             $table->dateTime('start')->nullable();
             $table->dateTime('end')->nullable();
             $table->integer('priority')->unsigned()->nullable();
+            $table->enum('status', ['open','inprogress','pending','onhold','completed','abandoned'])->default('open');
             $table->timestamps();
             $table->softDeletes();
         });
