@@ -17,7 +17,8 @@ class ProjectUserFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "project_id" => \App\Models\Project::factory(),
+            "user_id" => \App\Models\User::factory(),
         ];
     }
 }

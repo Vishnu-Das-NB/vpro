@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('task_documents', function (Blueprint $table) {
             $table->id();
-            $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
-            $table->foreign('document_id')->references('id')->on('documents')->onDelete('cascade');
+            $table->foreignId('task_id')->references('id')->on('tasks')->onDelete('cascade');
+            $table->foreignId('document_id')->references('id')->on('documents')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

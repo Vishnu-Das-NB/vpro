@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Meeting;
+use App\Models\Project;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,8 @@ class ProjectMeetingFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "project_id" => \App\Models\Project::factory(),
+            "meeting_id" => \App\Models\Meeting::factory(),
         ];
     }
 }

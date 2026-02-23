@@ -17,7 +17,8 @@ class TaskDocumentFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "task_id" => \App\Models\Task::factory(),
+            "document_id" => \App\Models\Document::factory(),
         ];
     }
 }

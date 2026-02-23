@@ -17,7 +17,8 @@ class TaskMeetingFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "task_id" => \App\Models\Task::factory(),
+            "meeting_id" => \App\Models\Meeting::factory(),
         ];
     }
 }

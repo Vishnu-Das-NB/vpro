@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Document;
+use App\Models\Project;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,8 @@ class ProjectDocumentFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "project_id" => \App\Models\Project::factory(),
+            "document_id" => \App\Models\Document::factory(),
         ];
     }
 }

@@ -17,7 +17,8 @@ class ProjectTeamFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "project_id" => \App\Models\Project::factory(),
+            "team_id" => \App\Models\Team::factory(),
         ];
     }
 }

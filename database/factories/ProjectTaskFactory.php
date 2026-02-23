@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,8 @@ class ProjectTaskFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "project_id" => \App\Models\Project::factory(),
+            "task_id" => \App\Models\Task::factory(),
         ];
     }
 }
