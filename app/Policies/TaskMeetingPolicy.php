@@ -13,7 +13,7 @@ class TaskMeetingPolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,7 +21,7 @@ class TaskMeetingPolicy
      */
     public function view(User $user, TaskMeeting $taskMeeting): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -29,7 +29,7 @@ class TaskMeetingPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -37,7 +37,7 @@ class TaskMeetingPolicy
      */
     public function update(User $user, TaskMeeting $taskMeeting): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -45,7 +45,7 @@ class TaskMeetingPolicy
      */
     public function delete(User $user, TaskMeeting $taskMeeting): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -53,7 +53,7 @@ class TaskMeetingPolicy
      */
     public function restore(User $user, TaskMeeting $taskMeeting): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -61,6 +61,6 @@ class TaskMeetingPolicy
      */
     public function forceDelete(User $user, TaskMeeting $taskMeeting): bool
     {
-        return false;
+        return true;
     }
 }

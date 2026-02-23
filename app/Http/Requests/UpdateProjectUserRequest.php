@@ -11,7 +11,7 @@ class UpdateProjectUserRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**

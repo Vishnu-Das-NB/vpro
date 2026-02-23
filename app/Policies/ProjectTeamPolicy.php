@@ -13,7 +13,7 @@ class ProjectTeamPolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,7 +21,7 @@ class ProjectTeamPolicy
      */
     public function view(User $user, ProjectTeam $projectTeam): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -29,7 +29,7 @@ class ProjectTeamPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -37,7 +37,7 @@ class ProjectTeamPolicy
      */
     public function update(User $user, ProjectTeam $projectTeam): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -45,7 +45,7 @@ class ProjectTeamPolicy
      */
     public function delete(User $user, ProjectTeam $projectTeam): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -53,7 +53,7 @@ class ProjectTeamPolicy
      */
     public function restore(User $user, ProjectTeam $projectTeam): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -61,6 +61,6 @@ class ProjectTeamPolicy
      */
     public function forceDelete(User $user, ProjectTeam $projectTeam): bool
     {
-        return false;
+        return true;
     }
 }
